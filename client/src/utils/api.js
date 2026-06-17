@@ -1,7 +1,12 @@
 import axios from 'axios';
 
+const isProduction = import.meta.env.MODE === 'production';
+const baseURL = isProduction 
+  ? 'https://vip-c2-shopez-e-commerce-application.onrender.com/api' 
+  : 'http://localhost:5000/api';
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+  baseURL: baseURL,
   headers: { 'Content-Type': 'application/json' },
 });
 
