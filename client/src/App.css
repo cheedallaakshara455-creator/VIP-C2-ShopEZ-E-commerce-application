@@ -1,0 +1,6 @@
+/* Clear vite default styles – global styles live in index.css */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
